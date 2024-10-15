@@ -241,25 +241,27 @@ body {
   margin-top: 40px; /* Space above */
 }
 
-.download-resume {
-  text-align: center; /* Center the download section */
-  margin-top: 40px; /* Space above */
-}
-
 .download-button {
   display: inline-block; /* Use inline-block to style as button */
-  padding: 10px 15px; /* Add padding */
+  padding: 12px 24px; /* Increased padding for larger button */
   background-color: #28a745; /* Green button color */
-  color: rgb(0, 0, 0); /* Text color */
+  color: rgb(255, 255, 255); /* Text color - changed to white for better contrast */
   border: none; /* Remove border */
   border-radius: 4px; /* Rounded corners */
   text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Adjust font size for better readability */
+  min-width: 150px; /* Set a minimum width for the button */
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background and box-shadow */
 }
 
 .download-button:hover {
   box-shadow: 0 0 10px rgba(40, 167, 69, 0.8), /* Green glow effect */
               0 0 20px rgba(178, 243, 193, 0.6); /* Increased glow */
+  background-color: #218838; /* Darker green on hover */
+}
+
+.download-button:disabled {
+  background-color: #6c757d; /* Gray background when disabled */
 }
 
 .progress-container {

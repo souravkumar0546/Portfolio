@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 const Projects = () => {
   const [progress, setProgress] = useState(0);
   const [isDownloading, setIsDownloading] = useState(false);
+
   const handleDownload = (event) => {
     event.preventDefault(); // Prevent the default anchor click behavior
     setIsDownloading(true);
@@ -47,7 +48,7 @@ const Projects = () => {
           <h3>Task Manager</h3>
           <p>A task management app with CRUD operations, user authentication, task filtering, and profile management using React and Go.</p>
           <a href="https://github.com/souravkumar0546/TaskManager" target="_blank" rel="noopener noreferrer" className="project-button">Code</a>
-<a href="https://tasktrackhub.netlify.app/" target="_blank" rel="noopener noreferrer" className="project-button" style={{ marginLeft: '20px' }}>Live Demo</a>
+          <a href="https://tasktrackhub.netlify.app/" target="_blank" rel="noopener noreferrer" className="project-button" style={{ marginLeft: '20px' }}>Live Demo</a>
         </div>
 
         <div className="project-card">
@@ -89,15 +90,14 @@ const Projects = () => {
       </div>
 
       <div className="download-resume">
-        <a 
-          href="#" 
+        <button 
           className="download-button" 
           onClick={handleDownload}
           // Disable the button if downloading
           style={{ pointerEvents: isDownloading ? 'none' : 'auto', opacity: isDownloading ? 0.6 : 1 }}
         >
           {isDownloading ? "Downloading..." : "Download Resume"}
-        </a>
+        </button>
         {isDownloading && (
           <div className="progress-container">
             <div className="progress-bar">
