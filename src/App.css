@@ -1,0 +1,628 @@
+/* App.css */
+
+/* Reset some basic margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make the site responsive */
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top:2em;
+}
+h1 {
+  font-family:"'Times New Roman', serif";
+  color:#3a3a3a;
+  font-size:3.5em;
+}
+h2 {
+  font-family:"'Times New Roman', serif";
+  color:#3a3a3a;
+  font-size:1.4em;
+}
+h3 {
+  font-family:"'Times New Roman', serif";
+  color:#3a3a3a;
+  font-size:0.8em;
+  text-align:center;
+}
+h4 {
+  font-family:"'Times New Roman', serif";
+  font-size:1.2em;
+  color:white;
+  text-align:center;
+}
+
+
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Header Styles */
+header {
+  background-color: #333; /* Keep existing header color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  position: fixed; /* Fix the header at the top */
+  top: 0; /* Position it at the top */
+  left: 0; /* Align it to the left */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center vertically */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin: 0 15px; /* Spacing between items */
+}
+
+.menu li.name {
+  font-size: 20px; /* Font size for your name */
+  font-weight: bold; /* Optional: make your name bold */
+}
+
+.menu li a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Keep existing link color */
+}
+
+.menu li a:hover {
+  color: #a9f7be; /* Keep existing hover color */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Body Padding to avoid overlap with fixed header */
+body {
+  padding-top: 60px; /* Adjust this value according to header height */
+}
+
+/* about me*/
+.about-me {
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center content */
+  padding: 20px; /* Add padding */
+}
+
+.about-me-content {
+  display: flex; /* Flexbox for content layout */
+  align-items: center; /* Center vertically */
+  max-width: 1200px; /* Limit max width for larger screens */
+  width: 100%; /* Full width */
+}
+
+.photo-container {
+  flex: 1; /* Take up 1 part of the flex space */
+  display: flex; /* Center image within the container */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center image and icons horizontally */
+}
+
+.about-photo {
+  width: 150px; /* Set a fixed width for the photo */
+  height: 150px; /* Set a fixed height for the photo */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  border-radius: 50%; /* Make the image circular */
+  border: 2px solid #ddd; /* Optional: Add a border for better visibility */
+}
+
+.social-media-links {
+  display: flex; /* Flexbox layout for icons */
+  justify-content: center; /* Center the icons */
+  margin-top: 10px; /* Add some space between the photo and icons */
+}
+
+.social-icon {
+  width: 30px; /* Set width for icons */
+  height: 30px; /* Set height for icons */
+  margin: 0 5px; /* Space between icons */
+}
+
+.intro-container {
+  flex: 2; /* Take up 2 parts of the flex space */
+  padding-left: 20px; /* Add space between photo and text */
+}
+
+@media (max-width: 768px) {
+  /* About Me section adjustments for mobile responsiveness */
+@media (max-width: 768px) {
+  .about-me-content {
+    flex-direction: column; /* Stack the photo and intro vertically */
+    align-items: center; /* Center the content horizontally */
+    text-align: center; /* Center text for better readability */
+  }
+
+  .photo-container {
+    margin-bottom: 20px; /* Add some space between photo and intro */
+  }
+
+  .intro-container {
+    padding-left: 0; /* Remove padding for smaller screens */
+    max-width: 90%; /* Adjust width to fit smaller screens */
+  }
+}
+
+}
+
+/* Projects */
+
+/* Projects Section Styles */
+.projects-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9; /* Light background */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Project Card Styles */
+.project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.15); /* Slightly scale up the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), /* Increased shadow */
+              0 0 25px rgba(40, 167, 69, 0.5); /* Glow effect */
+}
+.project-button {
+  display: inline-block; /* Use inline-block to style as button */
+  padding: 2px 12px; /* Smaller padding for a smaller button */
+  margin: 5px 0; /* Margin for spacing */
+  background-color: #5d5d5e; /* Change button color (e.g., green) */
+  color: rgb(183, 187, 184); /* Text color */
+  border: none; /* Remove border */
+  border-radius: 25px; /* More pronounced rounded corners */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+.project-button:hover {
+  background-color: #000000; /* Darker green on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+/* Download Resume Styles */
+.download-resume {
+  text-align: center; /* Center the download section */
+  margin-top: 40px; /* Space above */
+}
+
+.download-resume {
+  text-align: center; /* Center the download section */
+  margin-top: 40px; /* Space above */
+}
+
+.download-button {
+  display: inline-block; /* Use inline-block to style as button */
+  padding: 10px 15px; /* Add padding */
+  background-color: #28a745; /* Green button color */
+  color: rgb(0, 0, 0); /* Text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background and box-shadow */
+}
+
+.download-button:hover {
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.8), /* Green glow effect */
+              0 0 20px rgba(178, 243, 193, 0.6); /* Increased glow */
+}
+
+.progress-container {
+  position: relative; /* For positioning the progress text */
+  margin-top: 10px; /* Space between button and progress */
+  width: 100%; /* Full width */
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0; /* Light gray background */
+  border-radius: 4px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+}
+
+.progress {
+  height: 8px; /* Height of the progress bar */
+  background-color: #28a745; /* Green progress */
+  width: 0%; /* Initial width */
+  transition: width 0.1s ease; /* Smooth transition */
+}
+
+.progress-text {
+  position: absolute; /* Overlay text on the progress bar */
+  width: 100%; /* Full width */
+  text-align: center; /* Center text */
+  color: black; /* Text color */
+  font-weight: bold; /* Bold text */
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*skills*/
+/* Skills Section Styles */
+#skills {
+  /* padding: 20px;
+  text-align: center; */
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skill-wheel-container {
+  display: flex;
+  justify-content: space-evenly; /* Space out the wheels */
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  max-width: 100%;
+}
+
+.skill-wheel {
+  position: relative;
+  width: 250px; /* Size of the wheel */
+  height: 250px;
+  margin: 30px; /* Margin between wheels */
+}
+
+.category-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000; /* Background color for category node */
+  text-align: center;
+  color: rgb(219, 217, 217); /* Text color */
+  padding: 12px 18px; /* Padding for the category node */
+  border-radius: 50%; /* Make it circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+  z-index: 2; /* Ensure it's above skill nodes */
+}
+
+.skill-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #28a745;
+  color: rgb(10, 9, 9);
+  padding: 8px;
+  border-radius: 50%; /* Ensures circular shape */
+  width: 90px; /* Fixed width */
+  height: 90px; /* Fixed height */
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+  text-align: center;
+  overflow: hidden; /* Ensures text doesn't overflow outside the node */
+  white-space: nowrap; /* Prevents text from wrapping */
+  text-overflow: ellipsis; /* Adds ellipsis (...) for overflowed text */
+}
+
+.skill-text {
+  transform: rotate(0deg); /* Keep text horizontal */
+  font-size: 0.8rem;
+  max-width: 80px; /* Restrict the text width inside the circle */
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.skill-node:hover {
+  transform: translateY(-5px) scale(1.15);
+  cursor: pointer;
+  box-shadow: 0 10px 20px #060606;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  .skill-wheel-container {
+      flex-direction: column; /* Stack circles vertically on smaller screens */
+      align-items: center; /* Center align circles */
+  }
+
+  .skill-wheel {
+      width: 180px; /* Adjust size for smaller screens */
+      height: 250px;
+      margin: 40px; /* Increased margin for better spacing */
+  }
+
+  .category-node {
+      padding: 8px 12px; /* Adjust padding for smaller circles */
+  }
+
+  .skill-node {
+    min-width: 85px; /* Adjust minimum width */
+    min-height: 85px; /* Adjust minimum height */
+  }
+
+  .skill-text {
+    font-size: 0.6rem; /* Further reduce font size for smaller screens */
+  }
+}
+
+
+
+/*Contact*/
+#contact {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 100%; /* Full width */
+  max-width: 600px; /* Optional: Maximum width for larger screens */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between form elements */
+}
+
+input,
+textarea {
+  width: 100%; /* Full width of the screen */
+  padding: 15px; /* Input padding for a consistent look */
+  font-size: 1rem; /* Font size for input */
+  border: 2px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  outline: none; /* Remove outline */
+  box-sizing: border-box;
+  transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #03c831; /* Change border color on focus */
+}
+
+textarea {
+  height: 150px; /* Fixed height for textarea */
+  resize: vertical; /* Allow vertical resize */
+}
+
+button {
+  padding: 15px 20px; /* Same height as input fields */
+  font-size: 1rem;
+  background-color: #5d5d5e; /* Button background color */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 5px; /* Match input field rounding */
+  cursor: pointer; /* Pointer on hover */
+  width: 60px; /* Small width for the arrow button */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+button:hover {
+  background-color: #000000; /* Darker blue on hover */
+}
+
+button[type="submit"] {
+  width: auto; /* Normal width for the submit button */
+}
+
+.arrow-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-btn::before {
+  content: '→'; /* Arrow symbol */
+  font-size: 1.5rem;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.error-message {
+  color: red;
+  font-size: 1.12rem;
+  margin-top: 5px;
+  text-align: left;
+  width: 80%; /* Same width as the input */
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  input,
+  textarea {
+    font-size: 0.9rem; /* Smaller font for smaller screens */
+  }
+
+  button {
+    width: 50px; /* Smaller button width */
+  }
+
+  .arrow-btn::before {
+    font-size: 1.2rem; /* Adjust arrow size for small screens */
+  }
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu {
+      display: none; /* Hide the menu on small devices */
+  }
+}
+
+
+/* Section Styles */
+section {
+  padding: 50px 0;
+}
+
+section h1 {
+  font-size: 50px;
+  color: #131414;
+}
+section h2 {
+  font-size: 28px;
+  color: #007bff;
+  text-align: center;
+}
+
+section p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 18px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Project Card Styles */
+.project-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.project-card h3 {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.project-card p {
+  font-size: 16px;
+}
+
+/* Footer Styles */
+@media only screen and (max-width: 64em) {
+  .footer {
+      padding-top: 10px;
+      text-align: center;
+  }
+}
+
+.footer {
+  background: #fff;
+  position: relative;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 0px;
+  border-right: 20px solid white;
+  border-left: 20px solid white;
+}
+
+.footer p {
+  color: #222222;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px; /* Adjust as needed */
+}
+
+.columns {
+  flex: 1; /* Flexbox for responsive layout */
+  padding: 10px; /* Adjust spacing as needed */
+}
+
+.social-media-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center the icons */
+}
+
+.social-media-links li {
+  margin: 0 10px; /* Space between icons */
+}
+
+.social-icon {
+  width: 30px; /* Adjust icon size as needed */
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+  .fa-heart {
+  color: red;
+  font-size: 15px;
+  }
