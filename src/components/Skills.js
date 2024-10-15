@@ -41,18 +41,31 @@ const Skills = () => {
                 {categories.map((category, index) => (
                     <div className="skill-wheel" key={category}>
                         <div className="category-node">{category}</div>
-                        {skills[category].map((skill, skillIndex) => (
-                            <div
-                                className="skill-node"
-                                key={skill}
-                                style={{
-                                    transform: `rotate(${skillIndex * (360 / skills[category].length)}deg) translate(70px)`, // Adjust translate distance if needed
-                                }}
-                                title={skill}
-                            >
-                                {skill}
-                            </div>
-                        ))}
+                        {skills[category].map((skill, skillIndex) => {
+                            const totalSkills = skills[category].length;
+                            const rotationAngle = skillIndex * (360 / totalSkills); // Calculate rotation angle for each skill
+                            const reverseRotation = -rotationAngle; // Reverse angle for the text inside
+
+                            return (
+                                <div
+                                    className="skill-node"
+                                    key={skill}
+                                    style={{
+                                        transform: `rotate(${rotationAngle}deg) translate(70px)`,
+                                    }}
+                                    title={skill}
+                                >
+                                    <div
+                                        className="skill-text"
+                                        style={{
+                                            transform: `rotate(${reverseRotation}deg)`, // Rotate text in opposite direction
+                                        }}
+                                    >
+                                        {skill}
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
                 ))}
             </div>

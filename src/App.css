@@ -300,13 +300,11 @@ body {
 }
 
 /*skills*/
-/* Skills Section Styles */
 #skills {
-  /* padding: 20px;
-  text-align: center; */
+  text-align: center;
   padding: 50px 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   justify-content: center;
 }
 
@@ -329,6 +327,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  font-size: 0.9rem;
   transform: translate(-50%, -50%);
   background-color: #000000; /* Background color for category node */
   text-align: center;
@@ -362,8 +361,8 @@ body {
 }
 
 .skill-text {
-  transform: rotate(0deg); /* Keep text horizontal */
-  font-size: 0.8rem;
+  transform: rotate(0deg); /* Placeholder or default */
+  font-size: 0.9rem;
   max-width: 80px; /* Restrict the text width inside the circle */
   text-align: center;
   overflow: hidden;
@@ -390,6 +389,8 @@ body {
 
   .category-node {
       padding: 8px 12px; /* Adjust padding for smaller circles */
+      font-size: 0.8rem; /* Further reduce font size for smaller screens */
+
   }
 
   .skill-node {
@@ -398,7 +399,7 @@ body {
   }
 
   .skill-text {
-    font-size: 0.6rem; /* Further reduce font size for smaller screens */
+    font-size: 0.8rem; /* Further reduce font size for smaller screens */
   }
 }
 
