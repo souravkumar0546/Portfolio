@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 const Projects = () => {
   const [progress, setProgress] = useState(0);
   const [isDownloading, setIsDownloading] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null); // State for selected project
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  // Create a ref for the projects section
+  const projectsSectionRef = useRef(null);
 
   const handleDownload = (event) => {
     event.preventDefault();
@@ -92,26 +95,34 @@ const Projects = () => {
     }
   ];
 
-  // Function to handle when a project card is clicked
-  const handleCardClick = (project) => {
-    setSelectedProject(project);
-  };
+    // Function to handle when a project card is clicked
+const handleCardClick = (project) => {
+  setSelectedProject(project);
 
-  // Function to handle closing the project detail
-  const handleCloseDetail = () => {
-    setSelectedProject(null);
-  };
+  // Scroll to the top of the #projects section
+  setTimeout(() => {
+    window.scrollTo({
+      top: projectsSectionRef.current.offsetTop, // Scroll to the project section's top
+      behavior: 'smooth', // Smooth scrolling behavior
+    });
+  }, 100); // Small timeout to ensure selectedProject is updated before scrolling
+};
+  
+    // Function to handle closing the project detail
+    const handleCloseDetail = () => {
+      setSelectedProject(null);
+    };
 
   return (
-    <section id="projects" className="projects-section">
+    <section id="projects" className="projects-section" ref={projectsSectionRef}>
       <h2 className="section-title">My Projects</h2>
 
       {selectedProject ? (
         // If a project is selected, show the project detail view
         <div className="project-detail">
           <button onClick={handleCloseDetail} className="close-button">X</button>
-          
-          <h2>{selectedProject.title}</h2>
+
+          <h2 style={{ color: '#28a745' }}>{selectedProject.title}</h2>
           <p style={{ textAlign: 'left' }}>
             <strong>Description:</strong>&nbsp;
             {selectedProject.content}
