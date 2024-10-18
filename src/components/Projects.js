@@ -79,7 +79,7 @@ const Projects = () => {
       title: "Auto Dealership Data Automation",
       content: "Automated data entry for auto dealerships using Python scripts, significantly speeding up data processing and entry tasks.",
       detailedDescription: "▪ Created a Python script to automate data entry into an e-forms portal from accounting checks and purchase orders\n▪ Implemented a solution that iterates over a folder of 10k+ dealership data PDFs, extracts essential fields, and updates an e-forms portal via backend API calls, improving accuracy and processing efficiency of data entry\n",
-      techStack: "Python, Automation"
+      techStack: "Python, Automation\n"
     },
     {
       title: "Indoor Positioning App",
