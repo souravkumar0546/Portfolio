@@ -127,7 +127,7 @@ const handleCardClick = (project) => {
             <strong>Description:</strong>&nbsp;
             {selectedProject.content}
           </p>
-          <p style={{ textAlign: 'left', whiteSpace: 'pre-line' }}>
+          <p style={{ textAlign: 'left', whiteSpace: 'pre-line'}}>
             {selectedProject.detailedDescription}
           </p>
 
