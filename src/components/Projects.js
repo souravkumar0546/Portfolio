@@ -127,11 +127,11 @@ const handleCardClick = (project) => {
             <strong>Description:</strong>&nbsp;
             {selectedProject.content}
           </p>
-          <p style={{ textAlign: 'left', whiteSpace: 'pre-line',   fontSize: '1rem'}}>
+          <p style={{ textAlign: 'left', whiteSpace: 'pre-line',   fontSize: '1em'}}>
             {selectedProject.detailedDescription}
           </p>
 
-          <p style={{ textAlign: 'left' }}>
+          <p style={{ textAlign: 'left', whiteSpace: 'pre-line',   fontSize: '1em'}}>
             <strong>Tech Stack Used:</strong> {selectedProject.techStack}
           </p>
           
