@@ -43,8 +43,7 @@ const Projects = () => {
     {
       title: "Task Manager",
       content: "A task management app with CRUD operations, user authentication, task filtering, and profile management using React and Go.",
-      detailedDescription: "▪ Developed a task management app with CRUD operations, cookie-based user authentication, task filtering/search, and profile management with avatar upload/update\n▪ Built the front-end with React, using reusable components and state management for efficient UI rendering\n▪ Implemented the backend in Go using Gorilla Mux, with JWT-based authentication for secure middleware",
-
+      detailedDescription: "testing sjdsjknfjkasd",
       techStack: "React, Go, MongoDB, Node.js",
       code: "https://github.com/souravkumar0546/TaskManager",
       liveDemo: "https://tasktrackhub.netlify.app/"
@@ -79,7 +78,7 @@ const Projects = () => {
       title: "Auto Dealership Data Automation",
       content: "Automated data entry for auto dealerships using Python scripts, significantly speeding up data processing and entry tasks.",
       detailedDescription: "▪ Created a Python script to automate data entry into an e-forms portal from accounting checks and purchase orders\n▪ Implemented a solution that iterates over a folder of 10k+ dealership data PDFs, extracts essential fields, and updates an e-forms portal via backend API calls, improving accuracy and processing efficiency of data entry\n",
-      techStack: "Python, Automation\n"
+      techStack: "Python, Automation"
     },
     {
       title: "Indoor Positioning App",
