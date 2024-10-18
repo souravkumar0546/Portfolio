@@ -1,0 +1,103 @@
+#skills {
+    text-align: center;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+  }
+  
+  .skill-wheel-container {
+    display: flex;
+    justify-content: space-evenly; /* Space out the wheels */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    max-width: 100%;
+  }
+  
+  .skill-wheel {
+    position: relative;
+    width: 250px; /* Size of the wheel */
+    height: 250px;
+    margin: 30px; /* Margin between wheels */
+  }
+  
+  .category-node {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 0.9rem;
+    transform: translate(-50%, -50%);
+    background-color: #000000; /* Background color for category node */
+    text-align: center;
+    color: rgb(219, 217, 217); /* Text color */
+    padding: 12px 18px; /* Padding for the category node */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    z-index: 2; /* Ensure it's above skill nodes */
+  }
+  
+  .skill-node {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #28a745;
+    color: rgb(10, 9, 9);
+    padding: 8px;
+    border-radius: 50%; /* Ensures circular shape */
+    width: 90px; /* Fixed width */
+    height: 90px; /* Fixed height */
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+    text-align: center;
+    overflow: hidden; /* Ensures text doesn't overflow outside the node */
+    white-space: nowrap; /* Prevents text from wrapping */
+    text-overflow: ellipsis; /* Adds ellipsis (...) for overflowed text */
+  }
+  
+  .skill-text {
+    transform: rotate(0deg); /* Placeholder or default */
+    font-size: 0.9rem;
+    max-width: 80px; /* Restrict the text width inside the circle */
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .skill-node:hover {
+    transform: translateY(-5px) scale(1.15);
+    cursor: pointer;
+    box-shadow: 0 10px 20px #060606;
+  }
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .skill-wheel-container {
+        flex-direction: column; /* Stack circles vertically on smaller screens */
+        align-items: center; /* Center align circles */
+    }
+  
+    .skill-wheel {
+        width: 180px; /* Adjust size for smaller screens */
+        height: 250px;
+        margin: 40px; /* Increased margin for better spacing */
+    }
+  
+    .category-node {
+        padding: 8px 12px; /* Adjust padding for smaller circles */
+        font-size: 0.8rem; /* Further reduce font size for smaller screens */
+  
+    }
+  
+    .skill-node {
+      min-width: 85px; /* Adjust minimum width */
+      min-height: 85px; /* Adjust minimum height */
+    }
+  
+    .skill-text {
+      font-size: 0.8rem; /* Further reduce font size for smaller screens */
+    }
+  }
+  

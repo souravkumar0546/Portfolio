@@ -1,0 +1,50 @@
+
+/* Header Styles */
+header {
+    background-color: #333; /* Keep existing header color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center vertically */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li {
+    margin: 0 15px; /* Spacing between items */
+  }
+  
+  .menu li.name {
+    font-size: 20px; /* Font size for your name */
+    font-weight: bold; /* Optional: make your name bold */
+  }
+  
+  .menu li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Keep existing link color */
+  }
+  
+  .menu li a:hover {
+    color: #a9f7be; /* Keep existing hover color */
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Responsive styles */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide the menu on small devices */
+    }
+  }

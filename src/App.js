@@ -1,5 +1,12 @@
 import React from 'react';
 import './App.css';
+import'./styles/AboutMe.css';
+import'./styles/Header.css';
+import './styles/Project.css';
+import './styles/Skill.css';
+import './styles/Contact.css'
+import './styles/Footer.css';
+
 import AboutMe from './components/AboutMe';
 import ContactMe from './components/ContactMe';
 import Footer from './components/Footer';
