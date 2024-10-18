@@ -38,12 +38,16 @@ const Projects = () => {
     document.body.removeChild(downloadLink);
   };
 
-  // Project data including the 'detailedDescription' and new 'techStack' field
+  // Project data including the 'detailedDescription' as an array and the 'techStack' field
   const projects = [
     {
       title: "Task Manager",
       content: "A task management app with CRUD operations, user authentication, task filtering, and profile management using React and Go.",
-      detailedDescription: "▪ Developed a task management app with CRUD operations, cookie-based user authentication, task filtering/search, and profile management with avatar upload/update\n▪ Built the front-end with React, using reusable components and state management for efficient UI rendering\n▪ Implemented the backend in Go using Gorilla Mux, with JWT-based authentication for secure middleware",
+      detailedDescription: [
+        "Developed a task management app with CRUD operations, cookie-based user authentication, task filtering/search, and profile management with avatar upload/update",
+        "Built the front-end with React, using reusable components and state management for efficient UI rendering",
+        "Implemented the backend in Go using Gorilla Mux, with JWT-based authentication for secure middleware"
+      ],
       techStack: "React, Go, MongoDB, Node.js",
       code: "https://github.com/souravkumar0546/TaskManager",
       liveDemo: "https://tasktrackhub.netlify.app/"
@@ -51,66 +55,91 @@ const Projects = () => {
     {
       title: "Crypto-Betting Web App",
       content: "A one-player trading game built with ReactJS where the player bets on the BTC/USDT price movement in real-time.",
-      detailedDescription: "▪ Built the entire front-end using ReactJS and created a one-player trading game wherein the player can see the real-time price of BTC/USDT and can bet on the price of the asset going either up or down in the next minute\n▪ Integrated the Binance API in the app to update the last traded price of the asset continuously through live streamsvia WebSocket APIs\n",
+      detailedDescription: [
+        "Built the entire front-end using ReactJS and created a one-player trading game where the player can see the real-time price of BTC/USDT and can bet on the price of the asset going up or down",
+        "Integrated the Binance API to update the last traded price of the asset continuously via WebSocket APIs"
+      ],
       techStack: "React, Binance API, WebSocket",
       liveDemo: "https://bitcoinbet.netlify.app/"
     },
     {
       title: "Flight Notification System",
       content: "Real-time flight status notification system using React and Django, integrated with Apache Kafka and MongoDB for real-time user subscriptions.",
-      detailedDescription: "▪ Developed a flight status notification system using React for the frontend and Django for the backend\n▪ Integrated Apache Kafka for real-time message processing and MongoDB for scalable and efficient data storage\n▪ Implemented user subscriptions for flight status updates via email and SMS using Twilio and SMTP protocols\n",
+      detailedDescription: [
+        "Developed a flight status notification system using React for the frontend and Django for the backend",
+        "Integrated Apache Kafka for real-time message processing and MongoDB for scalable data storage",
+        "Implemented user subscriptions for flight status updates via email and SMS using Twilio and SMTP protocols"
+      ],
       techStack: "React, Django, Kafka, MongoDB",
       code: "https://github.com/souravkumar0546/FlightNotificationSystem"
     },
     {
       title: "Library Book Management System",
       content: "Built for Genpact using .NET Framework, managing library book loans and automating tasks like book tracking and user management.",
-      detailedDescription: "▪ Built a Library Book Management System on the .NET Framework for streamlined book borrowing and management\n▪ Implemented secure user authentication and authorization using Cookie-based Auth & Bcrypt for password hashing\n▪ Designed a user-friendly UI with role-based access, allowing admins to manage users and members to borrow books\n",
+      detailedDescription: [
+        "Built a Library Book Management System on the .NET Framework for streamlined book borrowing and management",
+        "Implemented secure user authentication and authorization using Cookie-based Auth & Bcrypt for password hashing",
+        "Designed a user-friendly UI with role-based access, allowing admins to manage users and members to borrow books"
+      ],
       techStack: ".NET Framework, SQL Server"
     },
     {
       title: "Central Fee Billing System",
       content: "Resolved a critical bug in Genpact's fee reversal API, improving transaction accuracy and reducing downtime.",
-      detailedDescription: "▪ Resolved a fee reversal API bug by using specific error codes, boosting support efficiency and issue resolution speed\n▪ Created integration tests for the fee reversal process, ensuring accuracy in refunds, billing errors, and adjustments\n",
+      detailedDescription: [
+        "Resolved a fee reversal API bug by using specific error codes, boosting support efficiency and issue resolution speed",
+        "Created integration tests for the fee reversal process, ensuring accuracy in refunds, billing errors, and adjustments"
+      ],
       techStack: ".NET Core, API Development"
     },
     {
       title: "Auto Dealership Data Automation",
       content: "Automated data entry for auto dealerships using Python scripts, significantly speeding up data processing and entry tasks.",
-      detailedDescription: "▪ Created a Python script to automate data entry into an e-forms portal from accounting checks and purchase orders\n▪ Implemented a solution that iterates over a folder of 10k+ dealership data PDFs, extracts essential fields, and updates an e-forms portal via backend API calls, improving accuracy and processing efficiency of data entry\n",
+      detailedDescription: [
+        "Created a Python script to automate data entry into an e-forms portal from accounting checks and purchase orders",
+        "Implemented a solution that processes 10k+ dealership data PDFs, extracts essential fields, and updates an e-forms portal via backend API calls"
+      ],
       techStack: "Python, Automation"
     },
     {
       title: "Indoor Positioning App",
       content: "Developed a mobile app using React Native and C++ for indoor positioning using beacon signals and trilateration for Maker Bhavan Foundation.",
-      detailedDescription: "▪ Developed a mobile app with React Native and C++ for locating positions inside a closed building using beacon signals\n▪ Implemented trilateration using beacon data to accurately determine indoor positions within the building\n▪ Enhanced positioning accuracy by applying a Kalman filter to effectively minimize noise in the location data\n",
+      detailedDescription: [
+        "Developed a mobile app with React Native and C++ for locating positions inside a building using beacon signals",
+        "Implemented trilateration using beacon data to accurately determine indoor positions",
+        "Enhanced positioning accuracy by applying a Kalman filter to effectively minimize noise in the location data"
+      ],
       techStack: "React Native, C++, Beacons"
     },
     {
       title: "Question Bank Application",
       content: "Created an app for generating automatic question papers with user authentication, question tagging, and analysis using the NLTK API.",
-      detailedDescription: "▪ Developed a user-authenticated platform that enables uploading and editing of questions using Django\n▪ Incorporated automatic paper generation feature, and a search and filter panel based on question tags\n▪ Built a language model trained on Stack Overflow dataset using NLTK API for automatic question tagging\n",
+      detailedDescription: [
+        "Developed a user-authenticated platform that enables uploading and editing of questions using Django",
+        "Incorporated automatic paper generation feature, and a search and filter panel based on question tags",
+        "Built a language model trained on Stack Overflow dataset using NLTK API for automatic question tagging"
+      ],
       techStack: "React, NLTK API"
     }
   ];
 
-    // Function to handle when a project card is clicked
-const handleCardClick = (project) => {
-  setSelectedProject(project);
+  // Function to handle when a project card is clicked
+  const handleCardClick = (project) => {
+    setSelectedProject(project);
 
-  // Scroll to the top of the #projects section
-  setTimeout(() => {
-    window.scrollTo({
-      top: projectsSectionRef.current.offsetTop, // Scroll to the project section's top
-      behavior: 'smooth', // Smooth scrolling behavior
-    });
-  }, 100); // Small timeout to ensure selectedProject is updated before scrolling
-};
-  
-    // Function to handle closing the project detail
-    const handleCloseDetail = () => {
-      setSelectedProject(null);
-    };
+    // Scroll to the top of the #projects section
+    setTimeout(() => {
+      window.scrollTo({
+        top: projectsSectionRef.current.offsetTop,
+        behavior: 'smooth',
+      });
+    }, 100);
+  };
+
+  // Function to handle closing the project detail
+  const handleCloseDetail = () => {
+    setSelectedProject(null);
+  };
 
   return (
     <section id="projects" className="projects-section" ref={projectsSectionRef}>
@@ -127,15 +156,17 @@ const handleCardClick = (project) => {
             {selectedProject.content}
           </p>
           <p>
-            {selectedProject.detailedDescription}
+          {selectedProject.detailedDescription.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
           </p>
-
+            
           <p>
             <strong>Tech Stack Used:</strong> {selectedProject.techStack}
           </p>
           
           <div className="project-buttons">
-          {selectedProject.code && (
+            {selectedProject.code && (
               <a href={selectedProject.code} target="_blank" rel="noopener noreferrer" className="project-button">
                 Code
               </a>
@@ -145,7 +176,6 @@ const handleCardClick = (project) => {
                 Live Demo
               </a>
             )}
-            
           </div>
         </div>
       ) : (

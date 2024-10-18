@@ -239,10 +239,17 @@ body {
   text-align: center; /* Center content */
 }
 .project-detail p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: left;
-  white-space: pre-line;
+  padding-top: 2px;
+}
 
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .project-detail p {
+    max-width: 90%; /* Adjust for smaller screen sizes */
+  }
 }
 .close-button {
   position: absolute;
