@@ -43,7 +43,7 @@ const Projects = () => {
     {
       title: "Task Manager",
       content: "A task management app with CRUD operations, user authentication, task filtering, and profile management using React and Go.",
-      detailedDescription: "testing sjdsjknfjkasd",
+      detailedDescription: "▪ Developed a task management app with CRUD operations, cookie-based user authentication, task filtering/search, and profile management with avatar upload/update\n▪ Built the front-end with React, using reusable components and state management for efficient UI rendering\n▪ Implemented the backend in Go using Gorilla Mux, with JWT-based authentication for secure middleware",
       techStack: "React, Go, MongoDB, Node.js",
       code: "https://github.com/souravkumar0546/TaskManager",
       liveDemo: "https://tasktrackhub.netlify.app/"
@@ -122,15 +122,15 @@ const handleCardClick = (project) => {
           <button onClick={handleCloseDetail} className="close-button">X</button>
 
           <h2 style={{ color: '#28a745' }}>{selectedProject.title}</h2>
-          <p style={{ textAlign: 'left' }}>
+          <p>
             <strong>Description:</strong>&nbsp;
             {selectedProject.content}
           </p>
-          <p style={{ textAlign: 'left', whiteSpace: 'pre-line',   fontSize: '1em'}}>
+          <p>
             {selectedProject.detailedDescription}
           </p>
 
-          <p style={{ textAlign: 'left', whiteSpace: 'pre-line',   fontSize: '1em'}}>
+          <p>
             <strong>Tech Stack Used:</strong> {selectedProject.techStack}
           </p>
           
