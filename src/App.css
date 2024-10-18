@@ -238,7 +238,9 @@ body {
   border-radius: 5px;
   text-align: center; /* Center content */
 }
-
+.project-detail p {
+  font-size: 1rem;
+}
 .close-button {
   position: absolute;
   top: 10px;
@@ -327,9 +329,6 @@ body {
 }
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .project-detail {
-    font-size: 0.8rem;
-  }
   .projects-grid {
     flex-direction: column;
     align-items: center;
